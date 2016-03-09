@@ -2,8 +2,8 @@
 
 {% block content %}
 
-	<h2>{{post.title}}</h2>
-	<h6> Posted on {{post.date}}</h6>
+	<h2>{% block title %}{{post.title}}{% endblock %}</h2>
+	<h6>{% block date %} Posted on {{post.date}}{% endblock %}</h6>
 	{{post.body|safe|linebreaks}}
 
 {% endblock %}
